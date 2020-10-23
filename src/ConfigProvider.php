@@ -12,7 +12,7 @@ declare(strict_types=1);
 
 namespace Turing\HyperfEvo;
 
-//use Turing\HyperfEvo\Middleware\CoreMiddleware;
+use Turing\HyperfEvo\Middleware\CoreMiddleware;
 use Turing\HyperfEvo\Utils\ServiceClient\ServiceClientFactory;
 use Turing\HyperfEvo\Utils\ServiceClient\ServiceClientInterface;
 
@@ -31,7 +31,7 @@ class ConfigProvider
                 ],
             ],
             'dependencies' => [
-//                \Hyperf\HttpServer\CoreMiddleware::class => CoreMiddleware::class,
+                \Hyperf\HttpServer\CoreMiddleware::class => CoreMiddleware::class,
                 ServiceClientInterface::class => ServiceClientFactory::class
             ],
             'exceptions' => [
