@@ -2,17 +2,22 @@
 declare(strict_types=1);
 
 namespace Turing\HyperfEvo\Traits;
-use Hyperf\Contract\StdoutLoggerInterface;
-use Hyperf\Di\Annotation\Inject;
+use Hyperf\Logger\LoggerFactory;
+use Psr\Container\ContainerInterface;
 
 
-trait LogTrails
+trait LoggerTrails
 {
     /**
-     * @inject
-     * @var StdoutLoggerInterface
+     * @var \Psr\Log\LoggerInterface
      */
-    protected StdoutLoggerInterface $logger;
+    protected $logger;
+
+
+    public function __construct(ContainerInterface $container)
+    {
+        $this->logger = $container->get(LoggerFactory::class)->get('log');
+    }
 
     /**
      * 记录错误日志

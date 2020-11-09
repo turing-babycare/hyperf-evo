@@ -21,10 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5533675e-87e8-4a17-aac5-c5089fa6f585" name="默认的" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Amqp/BaseConsumer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Amqp/BaseConsumer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Amqp/WebSocketProducer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Amqp/WebSocketProducer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Traits/ArrayTrails.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Traits/ArrayTrails.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Traits/LogTrails.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Traits/LogTrails.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Amqp/BaseConsumer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Traits/LogTrails.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Traits/LoggerTrails.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +167,7 @@
       <workItem from="1603380775367" duration="4943000" />
       <workItem from="1604742502102" duration="1603000" />
       <workItem from="1604886698901" duration="81000" />
-      <workItem from="1604901889368" duration="5546000" />
+      <workItem from="1604901889368" duration="8279000" />
     </task>
     <servers />
   </component>
@@ -188,6 +186,14 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
+    <state x="290" y="16" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1604911308395">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="290" y="16" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1604911308395" />
+    <state x="755" y="311" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604911314017">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="755" y="311" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1604911314017" />
     <state x="611" y="304" key="NewPhpClassDialog" timestamp="1603415925869">
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
