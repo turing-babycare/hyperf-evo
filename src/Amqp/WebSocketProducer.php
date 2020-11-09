@@ -22,7 +22,12 @@ class WebSocketProducer extends ProducerMessage
      */
     public function __construct(string $ns,string $uid='',string $event,array $data)
     {
-        $this->payload = $data;
+        $this->payload = [
+            'ns'=>$ns,
+            'uid'=>$uid,
+            'event'=>$event,
+            'content'=>$data
+        ];
     }
 
 }
