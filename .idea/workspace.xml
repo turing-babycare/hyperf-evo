@@ -20,7 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5533675e-87e8-4a17-aac5-c5089fa6f585" name="默认的" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Amqp/WebSocketProducer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Amqp/WebSocketProducer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +165,7 @@
       <workItem from="1603380775367" duration="4943000" />
       <workItem from="1604742502102" duration="1603000" />
       <workItem from="1604886698901" duration="81000" />
-      <workItem from="1604901889368" duration="1864000" />
+      <workItem from="1604901889368" duration="2114000" />
     </task>
     <servers />
   </component>
