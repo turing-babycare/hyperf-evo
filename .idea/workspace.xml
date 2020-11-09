@@ -20,7 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5533675e-87e8-4a17-aac5-c5089fa6f585" name="默认的" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Traits/ArrayTrails.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Traits/LogTrails.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Amqp/BaseConsumer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Amqp/BaseConsumer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Amqp/WebSocketProducer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Amqp/WebSocketProducer.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +169,7 @@
       <workItem from="1603380775367" duration="4943000" />
       <workItem from="1604742502102" duration="1603000" />
       <workItem from="1604886698901" duration="81000" />
-      <workItem from="1604901889368" duration="2114000" />
+      <workItem from="1604901889368" duration="4239000" />
     </task>
     <servers />
   </component>
@@ -188,15 +192,15 @@
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
     <state x="611" y="304" key="NewPhpClassDialog/1792.63.1920.1057/0.23.1792.1097@0.23.1792.1097" timestamp="1603415925869" />
-    <state x="830" y="486" key="NewPhpFileDialog" timestamp="1604901935612">
+    <state x="830" y="486" key="NewPhpFileDialog" timestamp="1604906987918">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="830" y="486" key="NewPhpFileDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1604901935612" />
+    <state x="830" y="486" key="NewPhpFileDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1604906987918" />
     <state x="726" y="502" key="NewPhpFileDialog/1792.63.1920.1057/0.23.1792.1097@0.23.1792.1097" timestamp="1603415932286" />
-    <state x="639" y="246" width="768" height="688" key="search.everywhere.popup" timestamp="1604903636576">
+    <state x="639" y="246" width="768" height="688" key="search.everywhere.popup" timestamp="1604907095426">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="639" y="246" width="768" height="688" key="search.everywhere.popup/0.0.2048.1112@0.0.2048.1112" timestamp="1604903636576" />
+    <state x="639" y="246" width="768" height="688" key="search.everywhere.popup/0.0.2048.1112@0.0.2048.1112" timestamp="1604907095426" />
     <state x="559" y="266" width="672" height="678" key="search.everywhere.popup/1792.63.1920.1057/0.23.1792.1097@0.23.1792.1097" timestamp="1603416053652" />
   </component>
 </project>
