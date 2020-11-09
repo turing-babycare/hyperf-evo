@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Turing\HyperfEvo\Producer;
+namespace Turing\HyperfEvo\Amqp;
 
 use Hyperf\Amqp\Annotation\Producer;
 use Hyperf\Amqp\Message\ProducerMessage;
