@@ -20,6 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5533675e-87e8-4a17-aac5-c5089fa6f585" name="默认的" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Traits/UUidTrails.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Traits/UUidTrails.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Utils/IdGeneratorService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/IdGeneratorService.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -167,7 +169,7 @@
       <workItem from="1604742502102" duration="1603000" />
       <workItem from="1604886698901" duration="81000" />
       <workItem from="1604901889368" duration="9884000" />
-      <workItem from="1604970919004" duration="5287000" />
+      <workItem from="1604970919004" duration="5364000" />
     </task>
     <servers />
   </component>

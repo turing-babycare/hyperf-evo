@@ -14,14 +14,10 @@ use Psr\Container\ContainerInterface;
 trait UUidTrails
 {
     /**
-     * @var IdGeneratorInterface
+     * @inject
+     * @var Hyperf\Snowflake\IdGeneratorInterface
      */
-    protected IdGeneratorInterface $idGenerator;
-
-    public function __construct(ContainerInterface $container)
-    {
-        $this->idGenerator = $container->get(IdGeneratorInterface::class);
-    }
+    protected Hyperf\Snowflake\IdGeneratorInterface $idGenerator;
 
     /**
      * 获取全局唯一id 基于 https://hyperf.wiki/2.0/#/zh-cn/snowflake

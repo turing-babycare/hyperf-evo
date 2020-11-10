@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Turing\HyperfEvo\Utils;
 
 
-use Hyperf\Snowflake\IdGeneratorInterface;
 use Hyperf\Di\Annotation\Inject;
 
 
@@ -13,9 +12,9 @@ class IdGeneratorService
 {
     /**
      * @inject
-     * @var IdGeneratorInterface
+     * @var Hyperf\Snowflake\IdGeneratorInterface
      */
-    protected IdGeneratorInterface $idGenerator;
+    protected Hyperf\Snowflake\IdGeneratorInterface $idGenerator;
 
     /**
      * 获取全局唯一id 基于 https://hyperf.wiki/2.0/#/zh-cn/snowflake
