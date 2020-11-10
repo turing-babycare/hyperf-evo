@@ -5,6 +5,7 @@ namespace Turing\HyperfEvo\Traits;
 
 use Hyperf\Snowflake\IdGeneratorInterface;
 use Psr\Container\ContainerInterface;
+use Hyperf\Di\Annotation\Inject;
 
 /**
  * Trait UUidTrails
