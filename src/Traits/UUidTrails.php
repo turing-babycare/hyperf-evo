@@ -4,8 +4,7 @@ declare(strict_types=1);
 namespace Turing\HyperfEvo\Traits;
 
 use Hyperf\Snowflake\IdGeneratorInterface;
-use Hyperf\Di\Annotation\Inject;
-
+use Psr\Container\ContainerInterface;
 
 /**
  * Trait UUidTrails
@@ -15,12 +14,14 @@ use Hyperf\Di\Annotation\Inject;
 trait UUidTrails
 {
     /**
-     * @inject
      * @var IdGeneratorInterface
      */
-    private  IdGeneratorInterface $idGenerator;
+    protected IdGeneratorInterface $idGenerator;
 
-
+    public function __construct(ContainerInterface $container)
+    {
+        $this->idGenerator = $container->get(IdGeneratorInterface::class);
+    }
 
     /**
      * 获取全局唯一id 基于 https://hyperf.wiki/2.0/#/zh-cn/snowflake
