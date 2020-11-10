@@ -20,8 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5533675e-87e8-4a17-aac5-c5089fa6f585" name="默认的" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Utils/IdGeneratorService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Traits/UUidTrails.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Traits/UUidTrails.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +168,7 @@
       <workItem from="1604742502102" duration="1603000" />
       <workItem from="1604886698901" duration="81000" />
       <workItem from="1604901889368" duration="9884000" />
-      <workItem from="1604970919004" duration="5055000" />
+      <workItem from="1604970919004" duration="5206000" />
     </task>
     <servers />
   </component>
@@ -192,13 +192,14 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="290" y="16" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1604911308395" />
-    <state x="755" y="311" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604971867168">
+    <state x="755" y="311" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605000153227">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="755" y="311" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1604971867168" />
-    <state x="611" y="304" key="NewPhpClassDialog" timestamp="1603415925869">
-      <screen x="0" y="23" width="1792" height="1097" />
+    <state x="755" y="311" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1605000153227" />
+    <state x="698" y="285" key="NewPhpClassDialog" timestamp="1605000128154">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
+    <state x="698" y="285" key="NewPhpClassDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1605000128154" />
     <state x="611" y="304" key="NewPhpClassDialog/1792.63.1920.1057/0.23.1792.1097@0.23.1792.1097" timestamp="1603415925869" />
     <state x="830" y="486" key="NewPhpFileDialog" timestamp="1604970940214">
       <screen x="0" y="0" width="2048" height="1112" />
