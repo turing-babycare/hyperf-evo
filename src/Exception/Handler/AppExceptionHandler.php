@@ -37,10 +37,15 @@ class AppExceptionHandler extends ExceptionHandler
     public function handle(Throwable $throwable, ResponseInterface $response)
     {
         $traceId = Context::get(ServerRequestInterface::class)->getAttribute('TRACE_ID');
+        $stack = sprintf('[%s] %s in %s:%s', get_class($throwable), $throwable->getMessage(), $throwable->getFile(), $throwable->getLine());
+
         $responseBody = [
             'trace_id' => $traceId,
-            'message' => $throwable->getMessage()
+            'message' => $throwable->getMessage(),
+            'stack' => $stack
         ];
+
+
         if ($throwable instanceof NotFoundHttpException) {
             $responseBody['message'] = '接口不存在.';
             $response = $this->response->json($responseBody)->withStatus(404);
@@ -59,7 +64,9 @@ class AppExceptionHandler extends ExceptionHandler
             $responseBody['message'] = '服务器错误:' . $responseBody['message'];
             $response = $this->response->json($responseBody)->withStatus(500);
         }
-        $this->logger->error(sprintf('[%s] %s in %s:%s', get_class($throwable), $throwable->getMessage(), $throwable->getFile(), $throwable->getLine()));
+
+
+        $this->logger->error($stack);
         return $response;
     }
 
