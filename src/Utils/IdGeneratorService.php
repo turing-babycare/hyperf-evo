@@ -6,6 +6,8 @@ namespace Turing\HyperfEvo\Utils;
 
 
 use Hyperf\Snowflake\IdGeneratorInterface;
+use Hyperf\Di\Annotation\Inject;
+
 
 class IdGeneratorService
 {
