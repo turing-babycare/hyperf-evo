@@ -16,9 +16,9 @@ trait UUidTrails
 {
     /**
      * @inject
-     * @var Hyperf\Snowflake\IdGeneratorInterface
+     * @var \Hyperf\Snowflake\IdGeneratorInterface
      */
-    protected Hyperf\Snowflake\IdGeneratorInterface $idGenerator;
+    protected \Hyperf\Snowflake\IdGeneratorInterface $idGenerator;
 
     /**
      * 获取全局唯一id 基于 https://hyperf.wiki/2.0/#/zh-cn/snowflake
