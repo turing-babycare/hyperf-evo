@@ -15,6 +15,8 @@ namespace Turing\HyperfEvo;
 use Turing\HyperfEvo\Middleware\CoreMiddleware;
 use Turing\HyperfEvo\Utils\ServiceClient\ServiceClientFactory;
 use Turing\HyperfEvo\Utils\ServiceClient\ServiceClientInterface;
+use Turing\HyperfEvo\Utils\UUID\UUidInterface;
+use Turing\HyperfEvo\Utils\UUID\UUidService;
 
 class ConfigProvider
 {
@@ -32,7 +34,8 @@ class ConfigProvider
             ],
             'dependencies' => [
                 \Hyperf\HttpServer\CoreMiddleware::class => CoreMiddleware::class,
-                ServiceClientInterface::class => ServiceClientFactory::class
+                ServiceClientInterface::class => ServiceClientFactory::class,
+                UUidInterface::class => UUidService::class
             ],
             'exceptions' => [
                 'handler' => [

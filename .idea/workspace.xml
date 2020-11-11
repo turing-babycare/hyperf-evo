@@ -20,9 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5533675e-87e8-4a17-aac5-c5089fa6f585" name="默认的" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Utils/Cache/ICacheInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Utils/UUID/UUidInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Utils/UUID/UUidService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/hyperf-evo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hyperf-evo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Traits/UUidTrails.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Traits/UUidTrails.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utils/IdGeneratorService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/IdGeneratorService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConfigProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConfigProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Traits/UUidTrails.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utils/IdGeneratorService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utils/ServiceClient/ServiceClient.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/ServiceClient/ServiceClient.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utils/ServiceClient/ServiceClientFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/ServiceClient/ServiceClientFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utils/ServiceClient/ServiceClientInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/ServiceClient/ServiceClientInterface.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,6 +140,9 @@
       <path value="$PROJECT_DIR$/vendor/php-amqplib/php-amqplib" />
       <path value="$PROJECT_DIR$/vendor/phpseclib/phpseclib" />
       <path value="$PROJECT_DIR$/vendor/hyperf/snowflake" />
+      <path value="$PROJECT_DIR$/vendor/hyperf/cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/hyperf/redis" />
     </include_path>
   </component>
   <component name="ProjectId" id="1jEsqLC7SJrJvxNVKDYi1QKRLeI" />
@@ -148,6 +161,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -169,7 +183,9 @@
       <workItem from="1604742502102" duration="1603000" />
       <workItem from="1604886698901" duration="81000" />
       <workItem from="1604901889368" duration="9884000" />
-      <workItem from="1604970919004" duration="6171000" />
+      <workItem from="1604970919004" duration="6794000" />
+      <workItem from="1605002792458" duration="203000" />
+      <workItem from="1605077576949" duration="2003000" />
     </task>
     <servers />
   </component>
@@ -189,6 +205,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="826" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1605078466506">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="826" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.2048.1112@0.0.2048.1112" timestamp="1605078466506" />
     <state x="290" y="16" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1604911308395">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -197,15 +217,15 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="755" y="311" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1605000153227" />
-    <state x="698" y="285" key="NewPhpClassDialog" timestamp="1605000128154">
+    <state x="698" y="285" key="NewPhpClassDialog" timestamp="1605078284798">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="698" y="285" key="NewPhpClassDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1605000128154" />
+    <state x="698" y="285" key="NewPhpClassDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1605078284798" />
     <state x="611" y="304" key="NewPhpClassDialog/1792.63.1920.1057/0.23.1792.1097@0.23.1792.1097" timestamp="1603415925869" />
-    <state x="830" y="486" key="NewPhpFileDialog" timestamp="1604970940214">
+    <state x="830" y="486" key="NewPhpFileDialog" timestamp="1605078609489">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="830" y="486" key="NewPhpFileDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1604970940214" />
+    <state x="830" y="486" key="NewPhpFileDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1605078609489" />
     <state x="726" y="502" key="NewPhpFileDialog/1792.63.1920.1057/0.23.1792.1097@0.23.1792.1097" timestamp="1603415932286" />
     <state x="639" y="246" width="768" height="688" key="search.everywhere.popup" timestamp="1604907095426">
       <screen x="0" y="0" width="2048" height="1112" />
