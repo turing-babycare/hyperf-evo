@@ -25,10 +25,10 @@ use Turing\HyperfEvo\Utils\ServiceClient\Exceptions\ServiceClientException;
 
 class AppExceptionHandler extends ExceptionHandler
 {
-    protected StdoutLoggerInterface $logger;
+    protected LoggerFactory $logger;
     protected \Hyperf\HttpServer\Contract\ResponseInterface $response;
 
-    public function __construct(StdoutLoggerInterface $logger, \Hyperf\HttpServer\Contract\ResponseInterface $response)
+    public function __construct(LoggerFactory $logger, \Hyperf\HttpServer\Contract\ResponseInterface $response)
     {
         $this->logger = $logger;
         $this->response = $response;

@@ -3,20 +3,16 @@ declare(strict_types=1);
 
 namespace Turing\HyperfEvo\Traits;
 use Hyperf\Logger\LoggerFactory;
-use Psr\Container\ContainerInterface;
+use Psr\Log\LoggerInterface;
 
 
 trait LoggerTrails
 {
-    /**
-     * @var \Psr\Log\LoggerInterface
-     */
-    protected $logger;
+    protected LoggerInterface $logger;
 
-
-    public function __construct(ContainerInterface $container)
+    public function __construct(LoggerFactory $loggerFactory)
     {
-        $this->logger = $container->get(LoggerFactory::class)->get('log');
+        $this->logger = $loggerFactory->get('log', 'default');
     }
 
     /**

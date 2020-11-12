@@ -20,19 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5533675e-87e8-4a17-aac5-c5089fa6f585" name="默认的" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Utils/Cache/ICacheInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Utils/UUID/UUidInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Utils/UUID/UUidService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/hyperf-evo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hyperf-evo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ConfigProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConfigProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Traits/UUidTrails.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utils/IdGeneratorService.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utils/ServiceClient/ServiceClient.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/ServiceClient/ServiceClient.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utils/ServiceClient/ServiceClientFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/ServiceClient/ServiceClientFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utils/ServiceClient/ServiceClientInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/ServiceClient/ServiceClientInterface.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +173,8 @@
       <workItem from="1604901889368" duration="9884000" />
       <workItem from="1604970919004" duration="6794000" />
       <workItem from="1605002792458" duration="203000" />
-      <workItem from="1605077576949" duration="2003000" />
+      <workItem from="1605077576949" duration="3344000" />
+      <workItem from="1605143950822" duration="12000" />
     </task>
     <servers />
   </component>
