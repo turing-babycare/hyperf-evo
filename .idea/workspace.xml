@@ -20,7 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5533675e-87e8-4a17-aac5-c5089fa6f585" name="默认的" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/hyperf-evo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hyperf-evo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exception/Handler/AppExceptionHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exception/Handler/AppExceptionHandler.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,9 +131,8 @@
       <path value="$PROJECT_DIR$/vendor/php-amqplib/php-amqplib" />
       <path value="$PROJECT_DIR$/vendor/phpseclib/phpseclib" />
       <path value="$PROJECT_DIR$/vendor/hyperf/snowflake" />
-      <path value="$PROJECT_DIR$/vendor/hyperf/cache" />
-      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
-      <path value="$PROJECT_DIR$/vendor/hyperf/redis" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/hyperf/logger" />
     </include_path>
   </component>
   <component name="ProjectId" id="1jEsqLC7SJrJvxNVKDYi1QKRLeI" />
@@ -175,7 +177,7 @@
       <workItem from="1605002792458" duration="203000" />
       <workItem from="1605077576949" duration="3344000" />
       <workItem from="1605143950822" duration="12000" />
-      <workItem from="1605155681425" duration="665000" />
+      <workItem from="1605155681425" duration="1274000" />
     </task>
     <servers />
   </component>

@@ -16,7 +16,6 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/guzzlehttp/promises" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/guzzlehttp/psr7" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/hyperf/amqp" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/hyperf/cache" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/hyperf/contract" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/hyperf/di" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/hyperf/dispatcher" />
@@ -26,9 +25,9 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/hyperf/guzzle" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/hyperf/http-message" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/hyperf/http-server" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/hyperf/logger" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/hyperf/pool" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/hyperf/process" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/hyperf/redis" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/hyperf/server" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/hyperf/snowflake" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/hyperf/testing" />
@@ -37,6 +36,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-mime" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-stdlib" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-zendframework-bridge" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/monolog/monolog" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/myclabs/deep-copy" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/nikic/fast-route" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/nikic/php-parser" />
@@ -63,7 +63,6 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/psr/http-server-handler" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/psr/http-server-middleware" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/psr/log" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/psr/simple-cache" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/ralouphie/getallheaders" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/roave/better-reflection" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/roave/signature" />
