@@ -29,6 +29,9 @@ class ServiceClient implements ServiceClientInterface
     public function getContextTraceId()
     {
         $ctxRequest = Context::get(ServerRequestInterface::class);
+        if(empty($ctxRequest)){
+            return '';
+        }
         return $ctxRequest->getAttribute('TRACE_ID');
     }
 
