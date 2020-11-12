@@ -20,13 +20,14 @@ use Hyperf\Logger\LoggerFactory;
 use Hyperf\Utils\Context;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
+use Psr\Log\LoggerInterface;
 use Throwable;
 use Turing\HyperfEvo\Exception\BusinessException;
 use Turing\HyperfEvo\Utils\ServiceClient\Exceptions\ServiceClientException;
 
 class AppExceptionHandler extends ExceptionHandler
 {
-    protected LoggerFactory $logger;
+    protected LoggerInterface $logger;
     protected \Hyperf\HttpServer\Contract\ResponseInterface $response;
 
     public function __construct(LoggerFactory $loggerFactory, \Hyperf\HttpServer\Contract\ResponseInterface $response)

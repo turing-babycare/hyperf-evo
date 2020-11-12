@@ -20,9 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5533675e-87e8-4a17-aac5-c5089fa6f585" name="默认的" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/hyperf-evo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hyperf-evo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Exception/Handler/AppExceptionHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exception/Handler/AppExceptionHandler.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -177,7 +174,7 @@
       <workItem from="1605002792458" duration="203000" />
       <workItem from="1605077576949" duration="3344000" />
       <workItem from="1605143950822" duration="12000" />
-      <workItem from="1605155681425" duration="1274000" />
+      <workItem from="1605155681425" duration="1773000" />
     </task>
     <servers />
   </component>
@@ -205,10 +202,10 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="290" y="16" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1604911308395" />
-    <state x="755" y="311" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605000153227">
+    <state x="755" y="311" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605157466901">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="755" y="311" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1605000153227" />
+    <state x="755" y="311" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1605157466901" />
     <state x="698" y="285" key="NewPhpClassDialog" timestamp="1605078284798">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
