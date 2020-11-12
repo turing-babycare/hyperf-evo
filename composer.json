@@ -25,6 +25,7 @@
         "hyperf/di": "2.0.*",
         "hyperf/framework": "2.0.*",
         "hyperf/guzzle": "^2.0",
+        "hyperf/logger": "^2.0",
         "hyperf/snowflake": "^2.0"
     },
     "require-dev": {

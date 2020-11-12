@@ -16,6 +16,7 @@ use Hyperf\Contract\StdoutLoggerInterface;
 use Hyperf\ExceptionHandler\ExceptionHandler;
 use Hyperf\HttpMessage\Exception\MethodNotAllowedHttpException;
 use Hyperf\HttpMessage\Exception\NotFoundHttpException;
+use Hyperf\Logger\LoggerFactory;
 use Hyperf\Utils\Context;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
