@@ -20,7 +20,7 @@ class LoggerService
      * @param Throwable $throwable
      * @param string $error_code 错误编码 用于定位业务错误
      */
-    protected function errorLogger(Throwable $throwable,string $error_code=''){
+    public function errorLogger(Throwable $throwable,string $error_code=''){
         if(empty($error_code)){
             $this->logger->error(sprintf('[%s] %s in %s:%s', get_class($throwable), $throwable->getMessage(), $throwable->getFile(), $throwable->getLine()));
         }else{
@@ -32,7 +32,7 @@ class LoggerService
      * @param $info
      * @param string $code 用于定位业务
      */
-    protected function infoLogger(string $info,string $code=''){
+    public function infoLogger(string $info,string $code=''){
         if(empty($code)){
             $this->logger->info(sprintf('%s', $info));
         }else{

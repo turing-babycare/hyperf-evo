@@ -21,6 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5533675e-87e8-4a17-aac5-c5089fa6f585" name="默认的" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utils/Logger/LoggerService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/Logger/LoggerService.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +175,7 @@
       <workItem from="1605002792458" duration="203000" />
       <workItem from="1605077576949" duration="3344000" />
       <workItem from="1605143950822" duration="12000" />
-      <workItem from="1605155681425" duration="3139000" />
+      <workItem from="1605155681425" duration="4111000" />
     </task>
     <servers />
   </component>
