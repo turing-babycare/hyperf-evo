@@ -3,5 +3,5 @@
 namespace Turing\HyperfEvo\Utils\UUID;
 
 interface UUidInterface {
-    public function getUuid();
+    public function getUuid():string;
 }

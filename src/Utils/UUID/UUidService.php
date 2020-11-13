@@ -12,8 +12,8 @@ class UUidService implements UUidInterface {
      */
     private \Hyperf\Snowflake\IdGeneratorInterface $idGenerator;
 
-    public function getUuid()
+    public function getUuid():string
     {
-        return $this->idGenerator->generate();
+        return (string)$this->idGenerator->generate();
     }
 }
