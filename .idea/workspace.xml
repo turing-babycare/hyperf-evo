@@ -20,9 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5533675e-87e8-4a17-aac5-c5089fa6f585" name="默认的" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Amqp/MutilWebSocketProducer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utils/UUID/UUidInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/UUID/UUidInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utils/UUID/UUidService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/UUID/UUidService.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +177,9 @@
       <workItem from="1605143950822" duration="12000" />
       <workItem from="1605155681425" duration="5063000" />
       <workItem from="1605163737726" duration="1497000" />
-      <workItem from="1605225471029" duration="5542000" />
+      <workItem from="1605225471029" duration="7335000" />
+      <workItem from="1605263683612" duration="16000" />
+      <workItem from="1605326037165" duration="291000" />
     </task>
     <servers />
   </component>
@@ -215,10 +216,10 @@
     </state>
     <state x="698" y="285" key="NewPhpClassDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1605158783567" />
     <state x="611" y="304" key="NewPhpClassDialog/1792.63.1920.1057/0.23.1792.1097@0.23.1792.1097" timestamp="1603415925869" />
-    <state x="830" y="486" key="NewPhpFileDialog" timestamp="1605078609489">
+    <state x="830" y="486" key="NewPhpFileDialog" timestamp="1605326224261">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="830" y="486" key="NewPhpFileDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1605078609489" />
+    <state x="830" y="486" key="NewPhpFileDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1605326224261" />
     <state x="726" y="502" key="NewPhpFileDialog/1792.63.1920.1057/0.23.1792.1097@0.23.1792.1097" timestamp="1603415932286" />
     <state x="639" y="246" width="768" height="688" key="search.everywhere.popup" timestamp="1604907095426">
       <screen x="0" y="0" width="2048" height="1112" />
