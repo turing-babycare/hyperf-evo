@@ -21,7 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5533675e-87e8-4a17-aac5-c5089fa6f585" name="默认的" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exception/Handler/AppExceptionHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exception/Handler/AppExceptionHandler.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,7 +179,7 @@
       <workItem from="1605225471029" duration="7335000" />
       <workItem from="1605263683612" duration="16000" />
       <workItem from="1605326037165" duration="291000" />
-      <workItem from="1608708102829" duration="648000" />
+      <workItem from="1608708102829" duration="1254000" />
     </task>
     <servers />
   </component>

@@ -30,8 +30,9 @@
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^2.14",
-        "phpstan/phpstan": "^0.12",
+        "hyperf/config-aliyun-acm": "^2.0",
         "hyperf/testing": "2.0.*",
+        "phpstan/phpstan": "^0.12",
         "swoole/ide-helper": "dev-master"
     },
     "config": {
