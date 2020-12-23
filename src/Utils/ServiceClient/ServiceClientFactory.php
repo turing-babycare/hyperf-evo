@@ -20,7 +20,7 @@ class ServiceClientFactory
         ]);
         return make(ServiceClient::class, [
             'client' => $client,
-            'serviceList' => json_decode(config('evo.service_client.service_list'),true)
+            'serviceList' => config('evo.service_client.service_list')
         ]);
     }
 }
