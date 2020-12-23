@@ -1,43 +1,49 @@
 <?php
 
-
+declare(strict_types=1);
+/**
+ * This file is part of Hyperf.
+ *
+ * @link     https://www.hyperf.io
+ * @document https://hyperf.wiki
+ * @contact  group@hyperf.io
+ * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
+ */
 namespace Turing\HyperfEvo\Utils\ServiceClient\Exceptions;
 
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 use RuntimeException;
-use Throwable;
 
 class ServiceClientException extends RuntimeException
 {
-    protected string $responseContent;
-
-    protected array $content;
-
     public RequestInterface $request;
 
     public ?ResponseInterface $response;
 
     public string $serviceName;
 
-    public function __construct(string $serviceName, RequestInterface $request, ResponseInterface $response = null)
+    public array $requestOptions;
+
+    public $content;
+
+    protected string $responseContent;
+
+    public function __construct(string $defaultMessage, string $serviceName, RequestInterface $request, ResponseInterface $response = null, $requestOptions)
     {
         $this->serviceName = $serviceName;
         $this->request = $request;
         $this->response = $response;
-        $this->content = [];
+        $this->requestOptions = $requestOptions;
+        $message = $defaultMessage;
         if ($response) {
-            $this->responseContent = $response->getBody()->getContents();
+            $this->content = $response->getBody()->getContents();
             try {
-                $this->content = json_decode($this->responseContent, true);
+                $this->content = json_decode($this->content, true);
+                $message = $this->content['message'];
             } catch (\Throwable $e) {
             }
         }
-        parent::__construct();
-    }
-
-    public function getAddress()
-    {
-        return "[{$this->request->getMethod()}]({$this->serviceName}){$this->request->getUri()}";
+        parent::__construct($message);
     }
 }

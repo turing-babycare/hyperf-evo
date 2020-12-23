@@ -5,14 +5,15 @@ declare(strict_types=1);
  * This file is part of Hyperf.
  *
  * @link     https://www.hyperf.io
- * @document https://doc.hyperf.io
+ * @document https://hyperf.wiki
  * @contact  group@hyperf.io
  * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
-
 namespace Turing\HyperfEvo;
 
+use Hyperf\ConfigAliyunAcm\Process\ConfigFetcherProcess;
 use Turing\HyperfEvo\Middleware\CoreMiddleware;
+use Turing\HyperfEvo\Process\AcmProcess;
 use Turing\HyperfEvo\Utils\ServiceClient\ServiceClientFactory;
 use Turing\HyperfEvo\Utils\ServiceClient\ServiceClientInterface;
 use Turing\HyperfEvo\Utils\UUID\UUidInterface;
@@ -35,23 +36,24 @@ class ConfigProvider
             'dependencies' => [
                 \Hyperf\HttpServer\CoreMiddleware::class => CoreMiddleware::class,
                 ServiceClientInterface::class => ServiceClientFactory::class,
-                UUidInterface::class => UUidService::class
+                UUidInterface::class => UUidService::class,
+                ConfigFetcherProcess::class => AcmProcess::class,
             ],
             'exceptions' => [
                 'handler' => [
                     'http' => [
-                        Exception\Handler\AppExceptionHandler::class
-                    ]
-                ]
+                        Exception\Handler\AppExceptionHandler::class,
+                    ],
+                ],
             ],
             'publish' => [
                 [
                     'id' => 'config',
                     'description' => 'The config for evo',
                     'source' => __DIR__ . '/../publish/evo.php',
-                    'destination' => BASE_PATH . '/config/autoload/evo.php'
-                ]
-            ]
+                    'destination' => BASE_PATH . '/config/autoload/evo.php',
+                ],
+            ],
         ];
     }
 }

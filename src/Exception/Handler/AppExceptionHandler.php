@@ -9,10 +9,9 @@ declare(strict_types=1);
  * @contact  group@hyperf.io
  * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
-
 namespace Turing\HyperfEvo\Exception\Handler;
 
-use Hyperf\Contract\StdoutLoggerInterface;
+use Hyperf\Contract\ConfigInterface;
 use Hyperf\ExceptionHandler\ExceptionHandler;
 use Hyperf\HttpMessage\Exception\MethodNotAllowedHttpException;
 use Hyperf\HttpMessage\Exception\NotFoundHttpException;
@@ -28,64 +27,75 @@ use Turing\HyperfEvo\Utils\ServiceClient\Exceptions\ServiceClientException;
 class AppExceptionHandler extends ExceptionHandler
 {
     protected LoggerInterface $logger;
+
     protected \Hyperf\HttpServer\Contract\ResponseInterface $response;
 
-    public function __construct(LoggerFactory $loggerFactory, \Hyperf\HttpServer\Contract\ResponseInterface $response)
+    protected ConfigInterface $config;
+
+    public function __construct(LoggerFactory $loggerFactory, \Hyperf\HttpServer\Contract\ResponseInterface $response, ConfigInterface $config)
     {
         $this->logger = $loggerFactory->get('log', 'default');
         $this->response = $response;
+        $this->config = $config;
     }
 
     public function handle(Throwable $throwable, ResponseInterface $response)
     {
-        $traceId = Context::get(ServerRequestInterface::class)->getAttribute('TRACE_ID');
-        $stack = sprintf('[%s] %s in %s:%s', get_class($throwable), $throwable->getMessage(), $throwable->getFile(), $throwable->getLine());
+        $request = Context::get(ServerRequestInterface::class);
+        $traceId = null;
+        $url = null;
+        if ($request) {
+            $traceId = $request->getAttribute('TRACE_ID');
+            $uri = $request->getUri();
+            $url = "[{$request->getMethod()}] {$uri->getScheme()}://{$uri->getAuthority()}{$uri->getPath()}?{$uri->getQuery()}";
+        }
 
         $responseBody = [
             'trace_id' => $traceId,
-            'service_name' => env('APP_NAME'),
+            'service_name' => $this->config->get('app_name'),
             'message' => $throwable->getMessage(),
-            'stack' => $stack
+            'stack' => sprintf("[%s] %s in %s:%s\n%s", get_class($throwable), $throwable->getMessage(), $throwable->getFile(), $throwable->getLine(), $throwable->getTraceAsString()),
+            'service_client_detail' => null,
         ];
-        $errorDetail = [];
+
         if ($throwable instanceof NotFoundHttpException) {
             $responseBody['message'] = '接口不存在.';
             $response = $this->response->json($responseBody)->withStatus(404);
-        } else if ($throwable instanceof MethodNotAllowedHttpException) {
+        } elseif ($throwable instanceof MethodNotAllowedHttpException) {
             $responseBody['message'] = '未定义的操作.';
             $response = $this->response->json($responseBody)->withStatus(405);
-        } else if ($throwable instanceof BusinessException) {
+        } elseif ($throwable instanceof BusinessException) {
             $response = $this->response->json($responseBody)->withStatus(400);
-        } else if ($throwable instanceof ServiceClientException) {
+        } elseif ($throwable instanceof ServiceClientException) {
             $statusCode = 500;
+            $errorDetail = [];
             if ($throwable->request) {
-                $uri = $throwable->request->getUri();
-                $errorDetail["request"] = [
-                    'method' => $throwable->request->getMethod(),
-                    'url' => "{$uri->getScheme()}://{$uri->getAuthority()}{$uri->getPath()}?{$uri->getQuery()}",
-                    'headers' => $throwable->request->getHeaders(),
-                    'body' => $throwable->request->getBody()->getContents()
-                ];
+                $errorDetail['request'] = $throwable->requestOptions;
             }
             if ($throwable->response) {
                 $statusCode = $throwable->response->getStatusCode();
-                $errorDetail["response"] = [
-                    'headers' => $throwable->response->getHeaders(),
+                $errorDetail['response'] = [
                     'status' => $throwable->response->getStatusCode(),
-                    'body' => $throwable->response->getBody()->getContents()
+                    'body' => $throwable->content,
                 ];
             }
-            $responseBody['detail'] = $errorDetail;
+            $responseBody['service_client_detail'] = $errorDetail;
             $response = $this->response->json($responseBody)->withStatus($statusCode);
         } else {
             $responseBody['message'] = '服务器错误:' . $responseBody['message'];
             $response = $this->response->json($responseBody)->withStatus(500);
         }
-
-        $split = env('APP_ENV') === 'dev' ? "\n" : ' ';
-        $errDetailStr = json_encode($errorDetail, env('APP_ENV') === 'dev' ? JSON_PRETTY_PRINT : null);
-        $this->logger->error("[RESPONSE-ERROR]{$split}SERVICE_NAME: {$responseBody['service_name']}{$split}TRACE_ID: {$traceId}{$split}message: {$throwable->getMessage()}{$split}stack: {$throwable}{$split}detail: {$errDetailStr}");
-
+        $errLog = sprintf(
+            "\nTYPE: %s\nSERVICE_NAME: %s\nURL: %s\nTRACE_ID: %s\nMESSAGE: %s\nSTACK: %s\nSERVICE_CLIENT_DETAIL: %s\n",
+            'RESPONSE-ERROR',
+            $responseBody['service_name'],
+            $url,
+            $traceId,
+            $throwable->getMessage(),
+            sprintf("[%s] %s in %s:%s\n%s", get_class($throwable), $throwable->getMessage(), $throwable->getFile(), $throwable->getLine(), $throwable->getTraceAsString()),
+            json_encode($responseBody['service_client_detail'], JSON_PRETTY_PRINT)
+        );
+        $this->logger->error($errLog);
         return $response;
     }
 
