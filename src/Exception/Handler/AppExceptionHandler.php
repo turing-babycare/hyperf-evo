@@ -75,6 +75,7 @@ class AppExceptionHandler extends ExceptionHandler
                     'body' => $throwable->response->getBody()->getContents()
                 ];
             }
+            $responseBody['detail'] = $errorDetail;
             $response = $this->response->json($responseBody)->withStatus($statusCode);
         } else {
             $responseBody['message'] = '服务器错误:' . $responseBody['message'];
