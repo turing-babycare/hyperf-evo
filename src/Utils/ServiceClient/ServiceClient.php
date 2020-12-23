@@ -22,12 +22,12 @@ class ServiceClient implements ServiceClientInterface
 {
     public Client $client;
 
-    public array $serviceList;
+    // public array $serviceList;
 
-    public function __construct(Client $client, array $serviceList = [])
+    public function __construct(Client $client)
     {
         $this->client = $client;
-        $this->serviceList = $serviceList;
+        // $this->serviceList = $serviceList;
     }
 
     public function getContextTraceId()
@@ -41,7 +41,8 @@ class ServiceClient implements ServiceClientInterface
 
     public function request(string $serviceName, string $method, string $uri, array $payload = [])
     {
-        if (! isset($this->serviceList[$serviceName])) {
+        $serviceList = config('evo.service_client.service_list');
+        if (! isset($serviceList[$serviceName])) {
             throw new ServiceClientUnknownException('远程服务"' . $serviceName . '"未注册');
         }
         $headers = array_merge($payload['headers'] ?? [], ['X_TRACE_ID' => $this->getContextTraceId()]);
@@ -50,7 +51,7 @@ class ServiceClient implements ServiceClientInterface
         $requestOptions = [
             'service_name' => $serviceName,
             'method' => $method,
-            'url' => $this->serviceList[$serviceName] . $uri,
+            'url' => $serviceList[$serviceName] . $uri,
             'payload' => [
                 'headers' => $headers,
                 'json' => $reqBody,
