@@ -11,9 +11,7 @@ declare(strict_types=1);
  */
 namespace Turing\HyperfEvo;
 
-use Hyperf\ConfigAliyunAcm\Process\ConfigFetcherProcess;
 use Turing\HyperfEvo\Middleware\CoreMiddleware;
-use Turing\HyperfEvo\Process\AcmProcess;
 use Turing\HyperfEvo\Utils\ServiceClient\ServiceClientFactory;
 use Turing\HyperfEvo\Utils\ServiceClient\ServiceClientInterface;
 use Turing\HyperfEvo\Utils\UUID\UUidInterface;
@@ -37,7 +35,6 @@ class ConfigProvider
                 \Hyperf\HttpServer\CoreMiddleware::class => CoreMiddleware::class,
                 ServiceClientInterface::class => ServiceClientFactory::class,
                 UUidInterface::class => UUidService::class,
-                ConfigFetcherProcess::class => AcmProcess::class,
             ],
             'exceptions' => [
                 'handler' => [
