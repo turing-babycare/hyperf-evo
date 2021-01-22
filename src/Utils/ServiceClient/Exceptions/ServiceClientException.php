@@ -22,7 +22,7 @@ class ServiceClientException extends RuntimeException
 
     public $content;
 
-    public function __construct($content, $request, ResponseInterface $response)
+    public function __construct($content, $request, ?ResponseInterface $response)
     {
         $this->request = $request;
         $this->content = $content;

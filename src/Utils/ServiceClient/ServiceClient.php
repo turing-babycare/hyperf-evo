@@ -73,6 +73,9 @@ class ServiceClient implements ServiceClientInterface
         } catch (ServiceClientException $e) {
             throw $e;
         } catch (\Throwable $e) {
+            throw new ServiceClientException([
+                'message' => $e->getMessage(),
+            ], $requestOptions, null);
         }
     }
 
