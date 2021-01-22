@@ -70,8 +70,9 @@ class AppExceptionHandler extends ExceptionHandler
             $statusCode = 500;
             $errorDetail = [];
             if ($throwable->request) {
-                $errorDetail['request'] = $throwable->requestOptions;
+                $errorDetail['request'] = $throwable->request;
             }
+
             if ($throwable->response) {
                 $statusCode = $throwable->response->getStatusCode();
                 $errorDetail['response'] = [

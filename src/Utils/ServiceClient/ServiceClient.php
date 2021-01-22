@@ -12,7 +12,6 @@ declare(strict_types=1);
 namespace Turing\HyperfEvo\Utils\ServiceClient;
 
 use GuzzleHttp\Client;
-use GuzzleHttp\Exception\RequestException;
 use Hyperf\Utils\Context;
 use Psr\Http\Message\ServerRequestInterface;
 use Turing\HyperfEvo\Utils\ServiceClient\Exceptions\ServiceClientException;
@@ -56,6 +55,7 @@ class ServiceClient implements ServiceClientInterface
                 'headers' => $headers,
                 'json' => $reqBody,
                 'query' => $query,
+                'http_errors' => false,
             ],
         ];
         try {
@@ -65,13 +65,14 @@ class ServiceClient implements ServiceClientInterface
                 $requestOptions['payload']
             );
             $content = $response->getBody()->getContents();
-            return json_decode($content, true);
-        } catch (RequestException $e) {
-            $request = $e->getRequest();
-            $response = $e->getResponse();
-            throw new ServiceClientException($e->getMessage(), $serviceName, $request, $response, $requestOptions);
+            $data = json_decode($content, true);
+            if ($response->getStatusCode() !== 200) {
+                throw new ServiceClientException($data, $requestOptions, $response);
+            }
+            return $data;
+        } catch (ServiceClientException $e) {
+            throw $e;
         } catch (\Throwable $e) {
-            throw new ServiceClientUnknownException("远端服务\"({$serviceName}){$requestOptions['url']}\"未知错误: {$e->getMessage()}");
         }
     }
 

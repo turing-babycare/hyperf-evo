@@ -11,39 +11,26 @@ declare(strict_types=1);
  */
 namespace Turing\HyperfEvo\Utils\ServiceClient\Exceptions;
 
-use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 use RuntimeException;
 
 class ServiceClientException extends RuntimeException
 {
-    public RequestInterface $request;
+    public $request;
 
-    public ?ResponseInterface $response;
-
-    public string $serviceName;
-
-    public array $requestOptions;
+    public $response;
 
     public $content;
 
-    protected string $responseContent;
-
-    public function __construct(string $defaultMessage, string $serviceName, RequestInterface $request, ResponseInterface $response = null, $requestOptions)
+    public function __construct($content, $request, ResponseInterface $response)
     {
-        $this->serviceName = $serviceName;
         $this->request = $request;
+        $this->content = $content;
         $this->response = $response;
-        $this->requestOptions = $requestOptions;
-        $message = $defaultMessage;
-        if ($response) {
-            $this->content = $response->getBody()->getContents();
-            try {
-                $this->content = json_decode($this->content, true);
-                $message = $this->content['message'];
-            } catch (\Throwable $e) {
-            }
+        if ($content && isset($content['message'])) {
+            parent::__construct($content['message']);
+        } else {
+            parent::__construct('未知错误');
         }
-        parent::__construct($message);
     }
 }
