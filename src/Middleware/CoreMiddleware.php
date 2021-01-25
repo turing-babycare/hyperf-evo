@@ -61,7 +61,7 @@ class CoreMiddleware extends \Hyperf\HttpServer\CoreMiddleware
         $status = 'TOPIC_NOT_FOUND';
         $result = null;
         $consumeWorker = null;
-        if (isset($payload['topic'], $payloa['body'])) {
+        if (isset($payload['topic'], $payload['body'])) {
             $consumeWorker = $this->tcm->getConsumer($payload['topic']);
         }
         if ($consumeWorker) {
