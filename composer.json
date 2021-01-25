@@ -29,8 +29,8 @@
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^2.14",
+        "hyperf/config": "^2.1",
         "hyperf/config-aliyun-acm": "2.1.*",
-        "hyperf/amqp": "2.1.*",
         "hyperf/process": "2.1.*",
         "hyperf/testing": "2.1.*",
         "phpstan/phpstan": "^0.12",
