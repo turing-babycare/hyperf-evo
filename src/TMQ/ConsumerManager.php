@@ -11,9 +11,8 @@ declare(strict_types=1);
  */
 namespace Turing\HyperfEvo\TMQ;
 
-use App\Utils\TMQ\Annotation\Consumer;
 use Hyperf\Di\Annotation\AnnotationCollector;
-use Turing\HyperfEvo\Exception\BusinessException;
+use Turing\HyperfEvo\TMQ\Annotation\Consumer;
 
 class ConsumerManager
 {
