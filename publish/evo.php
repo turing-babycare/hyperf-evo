@@ -17,9 +17,10 @@ return [
         ],
     ],
     'tmq' => [
-        'default_target_service' => 'ask',
-        'publish_service' => 'thirdparty',
-        'publish_url' => '/tmq/publish',
-        'consume_url' => '/tmq/consume',
+        'default_target_service' => 'ask', //默认发送的目标服务名称
+        'publish_service' => 'thirdparty', //TMQ服务名称
+        'publish_url' => '/tmq/publish', //TMQ服务生产消息的接口地址
+        'consume_url' => '/tmq/consume', //本地接收消息的地址
+        'local_service' => 'ask', //本地服务名称
     ],
 ];

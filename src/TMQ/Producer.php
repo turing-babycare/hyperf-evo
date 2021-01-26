@@ -33,6 +33,7 @@ class Producer
         $delay = 0;
         $props = [
             'consume_url' => config('evo.tmq.consume_url'),
+            'from_service' => config('evo.tmq.local_service'),
         ];
         if ($options) {
             if (isset($options['delay'])) {
